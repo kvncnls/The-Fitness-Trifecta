@@ -1,0 +1,144 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --main-font: sans-serif;
+  --secondary-font: "";
+  --body-font: sans-serif;
+  --main-color: rgb(29, 29, 29);
+  --secondary-color: ffffffda;
+  --tertiary-color: #;
+}
+
+html {
+  font-family: var(--body-font);
+  font-size: 10px;
+  color: var(--main-color);
+  scroll-behavior: smooth;
+  background-color: var(--secondary-color);
+}
+
+body {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.main_container {
+  background: var(--main-color);
+  border-radius: 25px;
+  width: 350px;
+}
+
+header {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 2.4rem;
+}
+
+.options {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.textbox {
+  background: #fff;
+  padding: 10px 10px;
+  min-width: 215px;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.textbox p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+/* Toggle Buttons*/
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 15px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 1;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f32121;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(255, 255, 255);
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+input:checked + .slider {
+  background-color: #21f33d;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
